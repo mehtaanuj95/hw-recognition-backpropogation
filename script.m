@@ -18,6 +18,12 @@ load('weights.mat');
 nn_params = [Theta1(:) ; Theta2(:)];
 
 %% Calculating cost of feed forward network
-lambda = 0;
+lambda = 1;
 J = costfunction(nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, lambda, Theta1, Theta2);
-J
+
+%% sigmoid gradient function
+%% The below statement only for debug purpose. value of g at 0 shoulb be 0.25.
+g = sigmoidgradient(0);
+
+
+
