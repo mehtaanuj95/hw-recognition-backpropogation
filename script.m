@@ -13,4 +13,7 @@ rand_indices = randperm(m); 			% Randomly select 100 data points to display
 selected = X(rand_indices(1:100), :);
 displayData(selected);
 
+%% Loading parameters
+load('weights.mat');
+nn_params = [Theta1(:) ; Theta2(:)];
 
