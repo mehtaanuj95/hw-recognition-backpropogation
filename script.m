@@ -25,5 +25,5 @@ J = costfunction(nn_params, input_layer_size, hidden_layer_size, num_labels, X, 
 %% The below statement only for debug purpose. value of g at 0 shoulb be 0.25.
 g = sigmoidgradient(0);
 
-
+%% Randomly initialize weights of layer with L_in incoming and L_out outgoing connections.
 
