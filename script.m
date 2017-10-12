@@ -17,3 +17,7 @@ displayData(selected);
 load('weights.mat');
 nn_params = [Theta1(:) ; Theta2(:)];
 
+%% Calculating cost of feed forward network
+lambda = 0;
+J = costfunction(nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, lambda, Theta1, Theta2);
+J
