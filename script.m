@@ -36,7 +36,7 @@ initial_nn_params = [initial_Theta1(:) ; initial_Theta2(:)];
 
 %% Training Neural network
 
-options = optimset('MaxIter', 5);
+options = optimset('MaxIter', 10);
 lambda = 1;
 
 % Create "short hand" for the cost function to be minimized
@@ -56,3 +56,10 @@ Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):en
 
 %% Visualizing the neural network function (hidden layers)
 displayData(Theta1(:, 2:end));
+
+%% Predicting Values and Calculating Accuracy
+p = predict(Theta1, Theta2, X);
+
+fprintf('\nTraining Set Accuracy: %f\n', mean(double(p == y)) * 100);
+
+
